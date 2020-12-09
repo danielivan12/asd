@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/174/174855.svg" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="AdminDashboard.css">
+  </head>
+  <body>
+    <header>
+      <div class="navigation-header">
+        <div class="logo-container">
+        <img class="logo" src="logo.gif"/>
+        <span class = "navigation-text1">CADM HOSPITAL INFORMATION SYSTEM</span>
+        </div>
+          <button class = "button-logout" type="button" onclick="logout()">Log out</button>
+      </div>
+    </header>
+    <section>
+    <div class="sidenav" id="sidenav">
+      <a class="sidenav-button" onclick="show()" > &#9776;</a>
+      <a class="side-buttons" onclick = "showDocDetails()"><img class="button-logo" src="logo1.jpg"/><span>Doctors</span></a>
+      <a class="side-buttons" onclick = "showNurseDetails()"><img class="button-logo" src="logo5.jpg"/><span>Nurses</span></a>
+      <a class="side-buttons"><img class="button-logo" src="logo4.png"/><span>Attendance</span></a>
+      <a class="side-buttons"><img class="button-logo" src="logo3.jpg"/><span>Inpatient</span></a>
+      <a class="side-buttons"><img class="button-logo" src="logo2.png"/><span>Outpatient</span></a>
+    </div>
+    <div class="main-container">
+<span class="head-text">ADMIN</span>
+  <div class="sub-container">
+    <div class="box" onclick = "showDocDetails()">
+      <img class="button-logo" src="logo1.jpg"/>
+      <div class="details">
+      <span class="box-title">Doctors</span>
+      <p class="text-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="box"  onclick = "showNurseDetails()">
+      <img src="logo5.jpg"/>
+      <div class="details">
+      <span class="box-title">Nurses</span>
+      <p class="text-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="box"  onclick = "showAttendance()">
+      <img src="logo4.png"/>
+      <div class="details">
+      <span class="box-title">Attendance</span>
+      <p class="text-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="box" onclick="showInPatient()">
+      <img src="logo3.jpg"/>
+      <div class="details">
+      <span class="box-title">Inpatient</span>
+      <p class="text-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+    <div class="box"  onclick = "showOutPatient()">
+      <img src="logo2.png"/>
+      <div class="details">
+      <span class="box-title">Outpatient</span>
+      <p class="text-details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+
+  </div>
+    </div>
+      </section>
+      <div id="Confirm"class="Confirmation-Logout hide">
+        <div class="Confirmation-nav">Logout Confirmation</div>
+        <span class="Confirmation-text">Do you really want to Log out?</span>
+        <div class="Confirmation-buttons-cont">
+        <button class="yes Confirmation-buttons" type="button" onclick="yes()">Yes</button>
+        <button class="no Confirmation-buttons" type="button" onclick="no()">No</button>
+        </div>
+      </div>
+  </body>
+  <script src="AdminDashboard.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,282 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+.navigation-header{
+  position: fixed;
+  border: solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgba(233,150,122,1);
+  width: 100%;
+}
+.logo-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  width : 80px;
+  height : 80px;
+  border-radius: 50%;
+}
+.navigation-text1 {
+  font-size: 50px;
+  padding: 10px;
+}
+.button-logout {
+  width: 100px;
+  font-size: 20px;
+  background: rgba(233,150,122,1);
+  border-style: solid 5px black ;
+}
+section {
+  display: flex;
+  flex-direction: row;
+}
+.sidenav {
+  background: rgba(233,150,122,1);
+  opacity: 200%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding :10px;
+  border-right: solid;
+  border-left: solid;
+  margin-top: 105px;
+  height: 100%;
+  width: 5%;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.extend {
+  transition: 0.3s;
+  width: 20%;
+}
+.button-logo {
+  width : 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.sidenav-button {
+  font-size: 80px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  padding-top:0;
+  height: 90px;
+}
+.side-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+.side-buttons span {
+  margin-left: 20px;
+  font-size: 35px;
+}
+.main-container {
+  margin-top: 105px;
+  margin-left: 5.5%;
+  padding: 5px 20px;
+  background-color: white;
+  width: 96%;
+  height: 900px;
+  border-left: solid;
+  border-right: solid;
+}
+.sub-container {
+  display: flex;
+  flex-wrap: wrap;
+  width:98%;
+}
+.Confirmation-Logout {
+  position: absolute;
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  top:50%;
+  left: 50%;
+  height: 200px;
+  transform: translate(-50%,-50%)scale(1);
+  width: 450px;
+  height 100px;
+  border:solid .5px ;
+  border-radius: 20px;
+}
+.hide {
+   display: none;
+   border: white;
+   width: 0;
+   height: 0;
+ }
+.Confirmation-nav {
+  font-size: 30px;
+  padding: 15px;
+  width: 93%;
+  font-size: 30px;
+  background-color:pink;
+  border-radius: 20px 20px 0 0 ;
+}
+.Confirmation-Logout span {
+  font-size: 20px;
+}
+.Confirmation-buttons {
+  background-color:pink;
+  width:150px;
+  margin:10px;
+  font-size: 20px;
+}
+.Confirmation-buttons-cont {
+  padding: 0 0 30px 0;
+  display: flex;
+  flex-direction:row;
+}
+.tab {
+  overflow: hidden;
+  display: block;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.docslist-table {
+  border: solid 1px;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+.docslist-table td{
+  height: 50px;
+  border: solid 1px;
+}
+.header th {
+  color: rgba(233,150,122,1);
+  border:solid black 1px;
+  height: 50px;
+}
+.forms {
+  padding: 20px;
+}
+.Age,.Email,.Gender {
+  display: flex;
+  justify-content: space-between;
+  width:800px;
+  padding: 20px;
+}
+.Age  label,.Email  label,.Gender label{
+  margin-right: 10px;
+  font-size: 30px;
+}
+.Age  input,.Email  input,.Gender input {
+  padding: 10px;
+}
+#maritalstatus, #gender, #bloodtype {
+  padding: 10px;
+}
+.FullName,.Address{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10px;
+  font-size: 30px;
+  width: 700px;
+  padding: 20px;
+}
+.FullName input,.Address input {
+  width: 500px;
+  padding: 10px;
+}
+.Email div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.botton-form {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reg div {
+
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+  justify-content: space-between;
+  width: 600px;
+}
+.reg input {
+  padding: 10px;
+  width: 300px;
+}
+.form-action-buttons {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.form-action-buttons input {
+  font-size: 30px;
+  width: 300px;
+  height: 100px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 1000;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

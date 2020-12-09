@@ -1,0 +1,33 @@
+<html>
+<title>Website</title>
+<head>
+
+<link rel="shortcut icon" href="#" type="image/x-icon">
+<link rel="stylesheet" href="loginas.css">
+<style>
+body {
+  margin : 0;
+  padding : 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(150,222,255,1) 13%, rgba(92,204,255,0.7371323529411764) 34%, rgba(0,176,255,0.9192051820728291) 100%);
+}
+</style>
+</head>
+<body>
+<a href="loginas.html"><img class="backbtn" src="blueback.png"/></a>
+<div class="login-container">
+<div class="login-nav">
+<img class="logo" src="logo.gif"/>
+<h1>CADM HOSPITAL
+INFORMATION SYSTEM</h1>
+</div>
+<div class="forms-container">
+<p>DOCTOR'S LOGIN</p>
+<span class="Invalid-text" id="invalidtxt"  >Invalid Login. Try Again!</span>
+<input id="DoctorsUser" class = "DoctorsUserName" type="text" placeholder="Username"></input>
+<input id="DoctorsPass" class = "DoctorsPassword" type="password" placeholder="Password"></input>
+<button class="btnsub" type="button" onclick="myFunction()">Login</button>
+</div>
+<script src="doctorslogin.js" charset="utf-8"></script>
+</body>
+</html>

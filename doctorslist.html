@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/174/174855.svg" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="doctorslist.css">
+  </head>
+  <body>
+    <header>
+      <div class="navigation-header">
+        <div class="logo-container">
+        <img class="logo" src="logo.gif"/>
+        <span class = "navigation-text1">CADM HOSPITAL INFORMATION SYSTEM</span>
+        </div>
+          <button class = "button-logout" type="button" onclick="logout()">Log out</button>
+      </div>
+    </header>
+    <section>
+    <div class="sidenav" id="sidenav">
+      <a class="sidenav-button" onclick="show()" > &#9776;</a>
+      <a class="side-buttons" onclick = "showDashboard()"><img class="button-logo" src="home.png"/><span>Dashboard</span></a>
+      <a class="side-buttons" onclick = "showDocDetails()"><img class="button-logo" src="logo1.jpg"/><span>Doctors</span></a>
+      <a class="side-buttons" onclick = "showNurseDetails()"><img class="button-logo" src="logo5.jpg"/><span>Nurses</span></a>
+      <a class="side-buttons"><img class="button-logo" src="logo4.png"/><span>Attendance</span></a>
+      <a class="side-buttons"><img class="button-logo" src="logo3.jpg"/><span>Inpatient</span></a>
+      <a class="side-buttons"><img class="button-logo" src="logo2.png"/><span>Outpatient</span></a>
+    </div>
+    <div class="main-container">
+            <div class="tab">
+              <button class="tablinks active" onclick="opentab(event, 'Doctor')">Doctors List</button>
+              <button onclick = "showModal()" type="button">Add Doctor</button>
+              <button class="tablinks" onclick="opentab(event, 'Salary')">Doctors salary</button>
+            </div>
+            <div id="Doctor" class="tabcontent">
+              <table class="docslist-table" id="doctorslist">
+                <thread>
+                  <tr class ="header">
+                    <th class="col2">Name</th>
+                    <th class="col3">Specialization</th>
+                    <th class="col4">mobile Number</th>
+                    <th class="col5">Email</th>
+                    <th class="col6">Gender</th>
+                    <th class="col7">Age</th>
+                    <th class="col8">Action</th>
+                  </tr>
+                </thread>
+              </table>
+
+            </div>
+            <div id="Salary" class="tabcontent">
+              view salary
+            </div>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+          <div>
+            <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+              <div>
+              <div class="FullName">
+                <label>Full Name :</label>
+                <input id ="fullname" type="text" name="Name" PlaceHolder="LastName, FirstName MiddleName"/>
+              </div>
+              <div class="Age">
+                <div>
+                  <label>Age : </label>
+                  <input id = "age" type="text" name="Name" PlaceHolder="Age"/>
+                </div>
+                <div>
+                  <label>Specialization :</label>
+                  <input id = "specialization" type="text" name="specialization" PlaceHolder="specialization"/>
+                </div>
+              </div>
+              <div class="Gender">
+                <div>
+                  <label>Gender :</label>
+                  <select name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Marital Status :</label>
+                  <select name="maritalstatus" id="maritalstatus">
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="widowed">widowed</option>
+                    <option value="Balo">Balo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="Email">
+                <div>
+                  <label>Email :</label>
+                  <input type="text" id = "email" name="email" PlaceHolder="Email"/>
+                </div>
+                <div>
+                  <label>Contact Number :</label>
+                  <input type="text" name="Contact" id="contact" PlaceHolder="Contact"/>
+                </div>
+              </div>
+              <div class="Address">
+                <label>Address :</label>
+                <input id="address" name="Name" PlaceHolder="Address"/>
+              </div>
+              </div>
+              <div class="form-action-buttons">
+                <input id = "submit" type="submit" value="Add And Submit">
+              </div>
+              </form>
+      </div>
+
+    </div>
+    </section>
+      <div id="Confirm"class="Confirmation-Logout hide">
+        <div class="Confirmation-nav">Logout Confirmation</div>
+        <span class="Confirmation-text">Do you really want to Log out?</span>
+        <div class="Confirmation-buttons-cont">
+        <button class="yes Confirmation-buttons" type="button" onclick="yes()">Yes</button>
+        <button class="no Confirmation-buttons" type="button" onclick="no()">No</button>
+        </div>
+      </div>
+  </body>
+  <script src="formAction.js" charset="utf-8"></script>
+  <script src="AdminDashboard.js" charset="utf-8"></script>
+  <script src="doctorslist.js" charset="utf-8"></script>
+</html>
